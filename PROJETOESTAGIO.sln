@@ -21,6 +21,22 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjetoEstagio.Infra", "Pro
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Infra.Data", "01 - Infra.Data", "{863A15C4-91CE-4BE4-825A-8CC4C929AF15}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contracts", "Contracts", "{AA5A5F05-3505-4877-B770-FBB34B4F3A4E}"
+	ProjectSection(SolutionItems) = preProject
+		IAlunoApplicationService.cs = IAlunoApplicationService.cs
+		ITurmaApplicationService.cs = ITurmaApplicationService.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{26D4DE0B-802C-4E86-A7E1-4E3797FD41F1}"
+	ProjectSection(SolutionItems) = preProject
+		AlunoCadastroModel.cs = AlunoCadastroModel.cs
+		AlunoEdicaoModel.cs = AlunoEdicaoModel.cs
+		TurmaCadastroModel.cs = TurmaCadastroModel.cs
+		TurmaEdicaoModel.cs = TurmaEdicaoModel.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{FD4C9365-52CA-40C6-8B25-163BE2082452}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +69,9 @@ Global
 		{55D48FE1-2FEF-43F1-94BF-84534F1FCB34} = {73D64091-DA61-4FAD-A5EB-8F779491AA38}
 		{20BCA9AA-BEE4-44E2-BF9F-B12A40EA7C7B} = {863A15C4-91CE-4BE4-825A-8CC4C929AF15}
 		{863A15C4-91CE-4BE4-825A-8CC4C929AF15} = {BD92B612-893C-4775-ACEF-0A8F56A941EB}
+		{AA5A5F05-3505-4877-B770-FBB34B4F3A4E} = {C2CD80AB-BA66-45D6-B1EC-EDCAA89D198C}
+		{26D4DE0B-802C-4E86-A7E1-4E3797FD41F1} = {C2CD80AB-BA66-45D6-B1EC-EDCAA89D198C}
+		{FD4C9365-52CA-40C6-8B25-163BE2082452} = {C2CD80AB-BA66-45D6-B1EC-EDCAA89D198C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B8A2BD06-5973-45F4-A020-0A9CEA679FD6}

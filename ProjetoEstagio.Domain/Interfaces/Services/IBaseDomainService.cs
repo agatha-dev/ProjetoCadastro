@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Projeto.Domain.Contracts.Repositories
+namespace Projeto.Domain.Contracts.Services
 {
-    public interface IBaseRepository<T> where T : class
+    public interface IBaseDomainService<T> where T : class
     {
         void Insert(T obj);
         void Update(T obj);

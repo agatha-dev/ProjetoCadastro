@@ -30,7 +30,7 @@ namespace ProjetoEstagio.Infra.Repositories
             return _sqlContext.Set<TEntity>().ToList();
         }
 
-        public TEntity GetById(int id)
+        public TEntity GetById(Guid id)
         {
             return _sqlContext.Set<TEntity>().Find(id);
         }

@@ -8,5 +8,6 @@ namespace Projeto.Domain.Contracts.Repositories
     public interface IAlunoRepository : IBaseRepository<Aluno>
     {
         Aluno GetEmail(string email);
+        Aluno GetById(Guid idAluno);
     }
 }

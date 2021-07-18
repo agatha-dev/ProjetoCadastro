@@ -7,17 +7,20 @@ using System.Threading.Tasks;
 
 namespace ProjetoEstagio.Domain.Entities
 {
-    class Aluno 
+    public class Aluno 
     {
-        public Guid IdAluno { get; set; }
+        public Guid IdAlunos { get; set; }
         public string Cpf { get; set; }
         public string nome { get; set; }
         public Guid  IdMatricula { get; set; }
-        public string Endeco { get; set; }
+        public Guid  IdTurma { get; set; }
+        public string Endereco { get; set; }
         public string Email { get; set; }
+
+        #region relacionamento
         //1 para 1
         public Turma Turma { get; set; }
 
-
+        #endregion
     }
 }

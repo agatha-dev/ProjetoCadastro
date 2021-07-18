@@ -1,0 +1,12 @@
+C:\PROJETOS\PROJETOESTAGIO\ProjetoEstagio.Domain\bin\Debug\net5.0\ProjetoEstagio.Domain.deps.json
+C:\PROJETOS\PROJETOESTAGIO\ProjetoEstagio.Domain\bin\Debug\net5.0\ProjetoEstagio.Domain.dll
+C:\PROJETOS\PROJETOESTAGIO\ProjetoEstagio.Domain\bin\Debug\net5.0\ref\ProjetoEstagio.Domain.dll
+C:\PROJETOS\PROJETOESTAGIO\ProjetoEstagio.Domain\bin\Debug\net5.0\ProjetoEstagio.Domain.pdb
+C:\PROJETOS\PROJETOESTAGIO\ProjetoEstagio.Domain\obj\Debug\net5.0\ProjetoEstagio.Domain.csproj.AssemblyReference.cache
+C:\PROJETOS\PROJETOESTAGIO\ProjetoEstagio.Domain\obj\Debug\net5.0\ProjetoEstagio.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\PROJETOS\PROJETOESTAGIO\ProjetoEstagio.Domain\obj\Debug\net5.0\ProjetoEstagio.Domain.AssemblyInfoInputs.cache
+C:\PROJETOS\PROJETOESTAGIO\ProjetoEstagio.Domain\obj\Debug\net5.0\ProjetoEstagio.Domain.AssemblyInfo.cs
+C:\PROJETOS\PROJETOESTAGIO\ProjetoEstagio.Domain\obj\Debug\net5.0\ProjetoEstagio.Domain.csproj.CoreCompileInputs.cache
+C:\PROJETOS\PROJETOESTAGIO\ProjetoEstagio.Domain\obj\Debug\net5.0\ProjetoEstagio.Domain.dll
+C:\PROJETOS\PROJETOESTAGIO\ProjetoEstagio.Domain\obj\Debug\net5.0\ref\ProjetoEstagio.Domain.dll
+C:\PROJETOS\PROJETOESTAGIO\ProjetoEstagio.Domain\obj\Debug\net5.0\ProjetoEstagio.Domain.pdb

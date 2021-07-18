@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 
 namespace ProjetoEstagio.Domain.Entities
 {
-    class Turma
+    public class Turma
     {
         public Guid IdTurma { get; set; }
+        public Guid IdAluno { get; set; }
         public string Curso { get; set; }
+
+        #region relacionamento
         //1 para muitos
         public List<Aluno> Alunos { get; set; }
+        #endregion
 
     }
 }

@@ -10,3 +10,6 @@ C:\PROJETOS\PROJETOESTAGIO\ProjetoEstagio.Application\obj\Debug\net5.0\ProjetoEs
 C:\PROJETOS\PROJETOESTAGIO\ProjetoEstagio.Application\obj\Debug\net5.0\ProjetoEstagio.Application.dll
 C:\PROJETOS\PROJETOESTAGIO\ProjetoEstagio.Application\obj\Debug\net5.0\ref\ProjetoEstagio.Application.dll
 C:\PROJETOS\PROJETOESTAGIO\ProjetoEstagio.Application\obj\Debug\net5.0\ProjetoEstagio.Application.pdb
+C:\PROJETOS\PROJETOESTAGIO\ProjetoEstagio.Application\bin\Debug\net5.0\ProjetoEstagio.Domain.dll
+C:\PROJETOS\PROJETOESTAGIO\ProjetoEstagio.Application\bin\Debug\net5.0\ProjetoEstagio.Domain.pdb
+C:\PROJETOS\PROJETOESTAGIO\ProjetoEstagio.Application\obj\Debug\net5.0\ProjetoEstagio.Application.csproj.CopyComplete

@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.8" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.11.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProjetoEstagio.Application\ProjetoEstagio.Application.csproj" />
+    <ProjectReference Include="..\PROJETOESTAGIO.Cryptography\PROJETOESTAGIO.Cryptography.csproj" />
+    <ProjectReference Include="..\ProjetoEstagio.Domain\ProjetoEstagio.Domain.csproj" />
+    <ProjectReference Include="..\ProjetoEstagio.Infra\ProjetoEstagio.Infra.csproj" />
+  </ItemGroup>
+
+</Project>

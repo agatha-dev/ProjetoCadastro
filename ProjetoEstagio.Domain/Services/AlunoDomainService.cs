@@ -34,7 +34,7 @@ namespace Projeto.Domain.Services
 
             if (registro != null)
             {
-                if (!registro.Equals(obj.Email))
+                if (!registro.Email.Equals(obj.Email))
                 {
                     alunoRepository.Update(obj);
                 }

@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v5.0": {
       "ProjetoEstagio.Application/1.0.0": {
+        "dependencies": {
+          "ProjetoEstagio.Domain": "1.0.0"
+        },
         "runtime": {
           "ProjetoEstagio.Application.dll": {}
+        }
+      },
+      "ProjetoEstagio.Domain/1.0.0": {
+        "runtime": {
+          "ProjetoEstagio.Domain.dll": {}
         }
       }
     }
   },
   "libraries": {
     "ProjetoEstagio.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProjetoEstagio.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

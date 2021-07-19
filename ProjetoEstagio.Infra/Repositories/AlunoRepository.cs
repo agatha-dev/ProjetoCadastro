@@ -19,11 +19,6 @@ namespace Projeto.Infra.Data.Repositories
             this.sqlContext = sqlContext;
         }
 
-        public Aluno GetById(Guid idAluno)
-        {
-            return sqlContext.Alunos.FirstOrDefault(a => a.IdAlunos == idAluno);
-        }
-
         public Aluno GetEmail(string email)
         {
             return sqlContext.Alunos

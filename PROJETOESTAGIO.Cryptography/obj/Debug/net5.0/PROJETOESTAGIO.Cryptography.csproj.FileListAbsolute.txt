@@ -1,0 +1,15 @@
+C:\PROJETOS\PROJETOESTAGIO\PROJETOESTAGIO.Cryptography\bin\Debug\net5.0\PROJETOESTAGIO.Cryptography.deps.json
+C:\PROJETOS\PROJETOESTAGIO\PROJETOESTAGIO.Cryptography\bin\Debug\net5.0\PROJETOESTAGIO.Cryptography.dll
+C:\PROJETOS\PROJETOESTAGIO\PROJETOESTAGIO.Cryptography\bin\Debug\net5.0\ref\PROJETOESTAGIO.Cryptography.dll
+C:\PROJETOS\PROJETOESTAGIO\PROJETOESTAGIO.Cryptography\bin\Debug\net5.0\PROJETOESTAGIO.Cryptography.pdb
+C:\PROJETOS\PROJETOESTAGIO\PROJETOESTAGIO.Cryptography\bin\Debug\net5.0\ProjetoEstagio.Domain.dll
+C:\PROJETOS\PROJETOESTAGIO\PROJETOESTAGIO.Cryptography\bin\Debug\net5.0\ProjetoEstagio.Domain.pdb
+C:\PROJETOS\PROJETOESTAGIO\PROJETOESTAGIO.Cryptography\obj\Debug\net5.0\PROJETOESTAGIO.Cryptography.csproj.AssemblyReference.cache
+C:\PROJETOS\PROJETOESTAGIO\PROJETOESTAGIO.Cryptography\obj\Debug\net5.0\PROJETOESTAGIO.Cryptography.GeneratedMSBuildEditorConfig.editorconfig
+C:\PROJETOS\PROJETOESTAGIO\PROJETOESTAGIO.Cryptography\obj\Debug\net5.0\PROJETOESTAGIO.Cryptography.AssemblyInfoInputs.cache
+C:\PROJETOS\PROJETOESTAGIO\PROJETOESTAGIO.Cryptography\obj\Debug\net5.0\PROJETOESTAGIO.Cryptography.AssemblyInfo.cs
+C:\PROJETOS\PROJETOESTAGIO\PROJETOESTAGIO.Cryptography\obj\Debug\net5.0\PROJETOESTAGIO.Cryptography.csproj.CoreCompileInputs.cache
+C:\PROJETOS\PROJETOESTAGIO\PROJETOESTAGIO.Cryptography\obj\Debug\net5.0\PROJETOESTAGIO.Cryptography.csproj.CopyComplete
+C:\PROJETOS\PROJETOESTAGIO\PROJETOESTAGIO.Cryptography\obj\Debug\net5.0\PROJETOESTAGIO.Cryptography.dll
+C:\PROJETOS\PROJETOESTAGIO\PROJETOESTAGIO.Cryptography\obj\Debug\net5.0\ref\PROJETOESTAGIO.Cryptography.dll
+C:\PROJETOS\PROJETOESTAGIO\PROJETOESTAGIO.Cryptography\obj\Debug\net5.0\PROJETOESTAGIO.Cryptography.pdb

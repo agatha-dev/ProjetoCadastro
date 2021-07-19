@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "ProjetoEstagio.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/ProjetoEstagio.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProjetoEstagio.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "ProjetoEstagio.Domain/1.0.0": {
+      "type": "project",
+      "path": "../ProjetoEstagio.Domain/ProjetoEstagio.Domain.csproj",
+      "msbuildProject": "../ProjetoEstagio.Domain/ProjetoEstagio.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "ProjetoEstagio.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\agath\\.nuget\\packages\\": {},
@@ -41,7 +60,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\PROJETOS\\PROJETOESTAGIO\\ProjetoEstagio.Domain\\ProjetoEstagio.Domain.csproj": {
+              "projectPath": "C:\\PROJETOS\\PROJETOESTAGIO\\ProjetoEstagio.Domain\\ProjetoEstagio.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

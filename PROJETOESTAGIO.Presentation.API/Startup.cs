@@ -97,12 +97,15 @@ namespace Projeto.Presentation.Api
 
             services.AddTransient<IAlunoApplicationService, AlunoApplicationService>();
             services.AddTransient<ITurmaApplicationService, TurmaApplicationService>();
+           
 
             services.AddTransient<IAlunoDomainService, AlunoDomainService>();
             services.AddTransient<ITurmaDomainService, TurmaDomainService>();
+            
 
             services.AddTransient<IAlunoRepository, AlunoRepository>();
             services.AddTransient<ITurmaRepository, TurmaRepository>();
+          
 
             services.AddTransient<IMD5Cryptography, MD5Cryptography>();
 

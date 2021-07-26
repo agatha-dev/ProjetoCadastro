@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Projeto01.Infra.Data.SqlServer.Mappings;
 using ProjetoEstagio.Domain.Entities;
 using ProjetoEstagio.Infra.Mappins;
 using System;
@@ -18,18 +19,18 @@ namespace ProjetoEstagio.Infra.Contexts
 
         public DbSet<Aluno> Alunos { get; set; }
         public DbSet<Turma> Turmas { get; set; }
+        public DbSet<UsuarioEntity> Usuario { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new AlunoMap());
             modelBuilder.ApplyConfiguration(new TurmaMap());
+            modelBuilder.ApplyConfiguration(new UsuarioMap());
 
             modelBuilder.Entity<Aluno>(entity =>
             {
                 entity.HasIndex(u => u.Email).IsUnique();
-
             });
-
         }
     }
 }

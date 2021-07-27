@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace ProjetoEstagio.Domain.Interfaces.Services
 {
-    public  interface IUsuarioDomainService : IBaseDomainService<UsuarioEntity>
+    public  interface IUsuarioDomainService : IBaseDomainService<Usuario>
     {
-        UsuarioEntity GetByLoginAndSenha(string Login, string Senha);
-        UsuarioEntity GetByLogin(string Login);
+        Usuario GetByLoginAndSenha(string Login, string Senha);
+        Usuario GetByLogin(string Login);
     }
 }

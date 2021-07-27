@@ -19,7 +19,7 @@ namespace ProjetoEstagio.Infra.Contexts
 
         public DbSet<Aluno> Alunos { get; set; }
         public DbSet<Turma> Turmas { get; set; }
-        public DbSet<UsuarioEntity> Usuario { get; set; }
+        public DbSet<Usuario> Usuario { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

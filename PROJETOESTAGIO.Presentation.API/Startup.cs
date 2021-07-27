@@ -18,7 +18,10 @@ using Projeto.Domain.Contracts.Services;
 using Projeto.Domain.Services;
 using Projeto.Infra.Data.Repositories;
 using Projeto.Presentation.Api.Authorization;
+using Projeto01.Infra.Data.SqlServer.Repositories;
 using ProjetoEstagio.Domain.Interfaces.Repositors;
+using ProjetoEstagio.Domain.Interfaces.Repository;
+using ProjetoEstagio.Domain.Interfaces.Services;
 using ProjetoEstagio.Infra.Contexts;
 using ProjetoEstagio.Infra.Repositories;
 
@@ -97,16 +100,17 @@ namespace Projeto.Presentation.Api
 
             services.AddTransient<IAlunoApplicationService, AlunoApplicationService>();
             services.AddTransient<ITurmaApplicationService, TurmaApplicationService>();
-           
+            services.AddTransient<IUsuarioApplicationService, UsuarioApplicationService>();
+
 
             services.AddTransient<IAlunoDomainService, AlunoDomainService>();
             services.AddTransient<ITurmaDomainService, TurmaDomainService>();
+            services.AddTransient<IUsuarioDomainService, UsuarioDomainService>();
             
-
             services.AddTransient<IAlunoRepository, AlunoRepository>();
             services.AddTransient<ITurmaRepository, TurmaRepository>();
+            services.AddTransient<IUsuarioRepository, UsuarioRepository>();
           
-
             services.AddTransient<IMD5Cryptography, MD5Cryptography>();
 
             #endregion

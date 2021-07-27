@@ -4,9 +4,9 @@ using ProjetoEstagio.Domain.Entities;
 
 namespace Projeto01.Infra.Data.SqlServer.Mappings
 {
-    public class UsuarioMap : IEntityTypeConfiguration<UsuarioEntity>
+    public class UsuarioMap : IEntityTypeConfiguration<Usuario>
     {
-        public void Configure(EntityTypeBuilder<UsuarioEntity> builder)
+        public void Configure(EntityTypeBuilder<Usuario> builder)
         {
             //nome da tabela
             builder.ToTable("Usuario");

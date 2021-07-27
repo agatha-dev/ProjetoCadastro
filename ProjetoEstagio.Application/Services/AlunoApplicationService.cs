@@ -38,11 +38,13 @@ namespace Projeto.Application.Services
         {
             var aluno = new Aluno();
 
-            aluno.IdAlunos = new Guid();
-            aluno.IdMatricula = new Guid();
-            aluno.IdTurma = new Guid();
+            aluno.IdAlunos = Guid.NewGuid();
+            aluno.IdMatricula = Guid.NewGuid();
+            aluno.IdTurma = Guid.NewGuid();
+            aluno.Cpf = model.Cpf;
             aluno.nome = model.Nome;
             aluno.Email = model.Email;
+            aluno.Endereco = model.Endereco;
             
             alunoDomainService.Insert(aluno);
         }

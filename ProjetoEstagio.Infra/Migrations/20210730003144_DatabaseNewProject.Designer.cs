@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProjetoEstagio.Infra.Contexts;
 
 namespace ProjetoEstagio.Infra.Migrations
 {
     [DbContext(typeof(SqlContext))]
-    partial class SqlContextModelSnapshot : ModelSnapshot
+    [Migration("20210730003144_DatabaseNewProject")]
+    partial class DatabaseNewProject
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,7 +23,7 @@ namespace ProjetoEstagio.Infra.Migrations
 
             modelBuilder.Entity("ProjetoEstagio.Domain.Entities.Aluno", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<Guid>("IdAluno")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier")
                         .HasColumnName("IdAluno");
@@ -54,7 +56,7 @@ namespace ProjetoEstagio.Infra.Migrations
                         .HasColumnType("nvarchar(150)")
                         .HasColumnName("Nome");
 
-                    b.HasKey("Id");
+                    b.HasKey("IdAluno");
 
                     b.HasIndex("Email")
                         .IsUnique();
@@ -66,30 +68,18 @@ namespace ProjetoEstagio.Infra.Migrations
 
             modelBuilder.Entity("ProjetoEstagio.Domain.Entities.Turma", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<Guid>("IdTurma")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier")
                         .HasColumnName("IdTurma");
 
-                    b.Property<string>("Ementa")
-                        .IsRequired()
-                        .HasMaxLength(300)
-                        .HasColumnType("nvarchar(300)")
-                        .HasColumnName("Ementa");
-
-                    b.Property<string>("NomeCurso")
+                    b.Property<string>("Curso")
                         .IsRequired()
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)")
                         .HasColumnName("Curso");
 
-                    b.Property<string>("NomeProfessor")
-                        .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)")
-                        .HasColumnName("NomeProfessor");
-
-                    b.HasKey("Id");
+                    b.HasKey("IdTurma");
 
                     b.ToTable("Turma");
                 });

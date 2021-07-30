@@ -10,8 +10,8 @@ using ProjetoEstagio.Infra.Contexts;
 namespace ProjetoEstagio.Infra.Migrations
 {
     [DbContext(typeof(SqlContext))]
-    [Migration("20210727020928_AddUsuario")]
-    partial class AddUsuario
+    [Migration("20210730185746_AddUpdate")]
+    partial class AddUpdate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,7 +23,7 @@ namespace ProjetoEstagio.Infra.Migrations
 
             modelBuilder.Entity("ProjetoEstagio.Domain.Entities.Aluno", b =>
                 {
-                    b.Property<Guid>("IdAlunos")
+                    b.Property<Guid>("IdAluno")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier")
                         .HasColumnName("IdAluno");
@@ -32,7 +32,7 @@ namespace ProjetoEstagio.Infra.Migrations
                         .IsRequired()
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)")
-                        .HasColumnName("cpf");
+                        .HasColumnName("Cpf");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -46,21 +46,17 @@ namespace ProjetoEstagio.Infra.Migrations
                         .HasColumnType("nvarchar(150)")
                         .HasColumnName("Endereco");
 
-                    b.Property<Guid>("IdMatricula")
-                        .HasColumnType("uniqueidentifier")
-                        .HasColumnName("IdMatricula");
-
                     b.Property<Guid>("IdTurma")
                         .HasColumnType("uniqueidentifier")
-                        .HasColumnName("idTurma");
+                        .HasColumnName("IdTurma");
 
-                    b.Property<string>("nome")
+                    b.Property<string>("Nome")
                         .IsRequired()
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)")
                         .HasColumnName("Nome");
 
-                    b.HasKey("IdAlunos");
+                    b.HasKey("IdAluno");
 
                     b.HasIndex("Email")
                         .IsUnique();
@@ -77,15 +73,23 @@ namespace ProjetoEstagio.Infra.Migrations
                         .HasColumnType("uniqueidentifier")
                         .HasColumnName("IdTurma");
 
-                    b.Property<string>("Curso")
+                    b.Property<string>("Ementa")
+                        .IsRequired()
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)")
+                        .HasColumnName("Ementa");
+
+                    b.Property<string>("NomeCurso")
                         .IsRequired()
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)")
                         .HasColumnName("Curso");
 
-                    b.Property<Guid>("IdAluno")
-                        .HasColumnType("uniqueidentifier")
-                        .HasColumnName("IdAluno");
+                    b.Property<string>("NomeProfessor")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)")
+                        .HasColumnName("NomeProfessor");
 
                     b.HasKey("IdTurma");
 

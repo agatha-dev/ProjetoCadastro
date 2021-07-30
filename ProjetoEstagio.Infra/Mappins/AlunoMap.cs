@@ -17,27 +17,22 @@ namespace ProjetoEstagio.Infra.Mappins
             builder.ToTable("Aluno");
 
             //chave primária
-            builder.HasKey(u => u.IdAlunos);
+            builder.HasKey(u => u.Id);
 
             //mapeamento dos campos
-            builder.Property(a => a.IdAlunos)
+            builder.Property(a => a.Id)
                     .HasColumnName("IdAluno");
 
-            builder.Property(n => n.nome)
+            builder.Property(a => a.IdTurma)
+                    .HasColumnName("IdTurma");
+
+            builder.Property(n => n.Nome)
                   .HasColumnName("Nome")
                   .HasMaxLength(150)
                   .IsRequired();
 
-            builder.Property(M => M.IdMatricula)
-                  .HasColumnName("IdMatricula")
-                  .IsRequired();
-
-            builder.Property(T => T.IdTurma)
-                  .HasColumnName("idTurma")
-                  .IsRequired();
-
             builder.Property(C => C.Cpf)
-                .HasColumnName("cpf")
+                .HasColumnName("Cpf")
                  .HasMaxLength(150)
                 .IsRequired();
 
@@ -51,14 +46,13 @@ namespace ProjetoEstagio.Infra.Mappins
                 .HasMaxLength(150)
                 .IsRequired();
 
-
             #region Relacionamentos
 
-            builder.HasOne(t => t.Turma)  //Aluno tem 1 turma
-                 .WithMany(a => a.Alunos) //Turma TEM N Alunos
-                 .HasForeignKey(T => T.IdTurma);  //Chave estrangeira
-            #endregion
+            builder.HasOne(x => x.Turma) //Aluno TEM 1 Turma
+                .WithMany(x => x.Alunos) //Turmas TEM N Aluno
+                .HasForeignKey(x => x.IdTurma); //Chave estrangeira
 
+            #endregion
 
         }
     }

@@ -5,6 +5,7 @@ using Projeto.Domain.Contracts.Services;
 using ProjetoEstagio.Domain.Entities;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Projeto.Application.Services
@@ -36,21 +37,24 @@ namespace Projeto.Application.Services
 
         public void Insert(TurmaCadastroModel model)
         {
-            var turma = new Turma();
-
-            turma.IdTurma = Guid.NewGuid();
-            turma.IdAluno = Guid.NewGuid();
-            turma.Curso = model.Curso;
+            var turma = new Turma
+            {
+                NomeCurso = model.NomeCurso,
+                NomeProfessor = model.NomeProfessor,
+                Ementa = model.Ementa
+            };
 
             turmaDomainService.Insert(turma);
         }
 
         public void Update(TurmaEdicaoModel model)
         {
-            var turma = new Turma();
-
-            turma.IdTurma = model.IdTurma;
-            turma.Curso = model.Curso;
+            var turma = new Turma
+            {
+                NomeCurso = model.NomeCurso,
+                NomeProfessor = model.NomeProfessor,
+                Ementa = model.Ementa
+            };
 
             turmaDomainService.Update(turma);
         }

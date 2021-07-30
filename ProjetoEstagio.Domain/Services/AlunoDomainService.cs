@@ -30,7 +30,7 @@ namespace Projeto.Domain.Services
 
         public override void Update(Aluno obj)
         {
-            var registro = alunoRepository.GetById(obj.IdAlunos);
+            var registro = alunoRepository.GetById(obj.Id);
 
             if (registro != null)
             {
@@ -48,7 +48,5 @@ namespace Projeto.Domain.Services
                 throw new Exception("Aluno não encontrado.");
             }
         }
-
-
     }
 }

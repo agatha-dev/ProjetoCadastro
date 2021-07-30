@@ -1,4 +1,5 @@
-﻿using Projeto.Domain;
+﻿using Microsoft.EntityFrameworkCore;
+using Projeto.Domain;
 using Projeto.Domain.Contracts.Repositories;
 using ProjetoEstagio.Domain.Entities;
 using ProjetoEstagio.Infra.Contexts;
@@ -21,8 +22,24 @@ namespace Projeto.Infra.Data.Repositories
 
         public Aluno GetEmail(string email)
         {
-            return sqlContext.Alunos
+            return sqlContext.Aluno
                 .FirstOrDefault(a => a.Email.Equals(email));
+        }
+
+        public override List<Aluno> GetAll()
+        {
+            return sqlContext
+                .Aluno
+                .Include(f => f.Turma) //LEFT JOIN
+                .ToList();
+        }
+
+        public override Aluno GetById(Guid id)
+        {
+            return sqlContext
+                .Aluno
+                .Include(f => f.Turma) //LEFT JOIN
+                .FirstOrDefault(f => f.Id == id);
         }
     }
 }

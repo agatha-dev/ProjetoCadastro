@@ -25,5 +25,7 @@ namespace Projeto.Application.Models
         [EmailAddress(ErrorMessage = "Por favor, informe um email válido.")]
         public string Email { get; set; }
 
+        [Required(ErrorMessage = "Por favor, informe o id da turma.")]
+        public string IdTurma { get; set; }
     }
 }

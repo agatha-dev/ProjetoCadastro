@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProjetoEstagio.Infra.Contexts;
 
 namespace ProjetoEstagio.Infra.Migrations
 {
     [DbContext(typeof(SqlContext))]
-    partial class SqlContextModelSnapshot : ModelSnapshot
+    [Migration("20210729235817_NewMigrate")]
+    partial class NewMigrate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,7 +23,7 @@ namespace ProjetoEstagio.Infra.Migrations
 
             modelBuilder.Entity("ProjetoEstagio.Domain.Entities.Aluno", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<Guid>("IdAluno")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier")
                         .HasColumnName("IdAluno");
@@ -30,7 +32,7 @@ namespace ProjetoEstagio.Infra.Migrations
                         .IsRequired()
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)")
-                        .HasColumnName("Cpf");
+                        .HasColumnName("cpf");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -44,52 +46,40 @@ namespace ProjetoEstagio.Infra.Migrations
                         .HasColumnType("nvarchar(150)")
                         .HasColumnName("Endereco");
 
-                    b.Property<Guid>("IdTurma")
-                        .HasColumnType("uniqueidentifier")
-                        .HasColumnName("IdTurma");
-
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)")
                         .HasColumnName("Nome");
 
-                    b.HasKey("Id");
+                    b.HasKey("IdAluno");
 
                     b.HasIndex("Email")
                         .IsUnique();
-
-                    b.HasIndex("IdTurma");
 
                     b.ToTable("Aluno");
                 });
 
             modelBuilder.Entity("ProjetoEstagio.Domain.Entities.Turma", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<Guid>("IdTurma")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier")
                         .HasColumnName("IdTurma");
 
-                    b.Property<string>("Ementa")
-                        .IsRequired()
-                        .HasMaxLength(300)
-                        .HasColumnType("nvarchar(300)")
-                        .HasColumnName("Ementa");
-
-                    b.Property<string>("NomeCurso")
+                    b.Property<string>("Curso")
                         .IsRequired()
                         .HasMaxLength(150)
                         .HasColumnType("nvarchar(150)")
                         .HasColumnName("Curso");
 
-                    b.Property<string>("NomeProfessor")
-                        .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)")
-                        .HasColumnName("NomeProfessor");
+                    b.Property<Guid>("IdAluno")
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnName("IdAluno");
 
-                    b.HasKey("Id");
+                    b.HasKey("IdTurma");
+
+                    b.HasIndex("IdAluno");
 
                     b.ToTable("Turma");
                 });
@@ -128,20 +118,20 @@ namespace ProjetoEstagio.Infra.Migrations
                     b.ToTable("Usuario");
                 });
 
-            modelBuilder.Entity("ProjetoEstagio.Domain.Entities.Aluno", b =>
+            modelBuilder.Entity("ProjetoEstagio.Domain.Entities.Turma", b =>
                 {
-                    b.HasOne("ProjetoEstagio.Domain.Entities.Turma", "Turma")
-                        .WithMany("Alunos")
-                        .HasForeignKey("IdTurma")
+                    b.HasOne("ProjetoEstagio.Domain.Entities.Aluno", "Aluno")
+                        .WithMany("Turmas")
+                        .HasForeignKey("IdAluno")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Turma");
+                    b.Navigation("Aluno");
                 });
 
-            modelBuilder.Entity("ProjetoEstagio.Domain.Entities.Turma", b =>
+            modelBuilder.Entity("ProjetoEstagio.Domain.Entities.Aluno", b =>
                 {
-                    b.Navigation("Alunos");
+                    b.Navigation("Turmas");
                 });
 #pragma warning restore 612, 618
         }

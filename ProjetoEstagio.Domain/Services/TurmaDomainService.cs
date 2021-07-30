@@ -12,5 +12,10 @@ namespace Projeto.Domain.Services
         {
             this.turmaRepository = turmaRepository;
         }
+
+        public override void Insert(Turma obj)
+        {
+            base.Insert(obj);
+        }
     }
 }

@@ -39,7 +39,6 @@ namespace Projeto.Domain.Services
             return baseRepository.GetById(id);
         }
 
-
         public virtual void Insert(T obj)
         {
             baseRepository.Insert(obj);

@@ -17,19 +17,25 @@ namespace ProjetoEstagio.Infra.Mappins
             builder.ToTable("Turma");
 
             //chave primária
-            builder.HasKey(u => u.IdTurma);
+            builder.HasKey(u => u.Id);
 
             //mapeamento dos campos
-            builder.Property(u => u.IdTurma)
+            builder.Property(u => u.Id)
                     .HasColumnName("IdTurma");
 
-            builder.Property(f => f.IdAluno)
-               .HasColumnName("IdAluno")
-               .IsRequired();
-
-            builder.Property(c => c.Curso)
+            builder.Property(c => c.NomeCurso)
               .HasColumnName("Curso")
               .HasMaxLength(150)
+              .IsRequired();
+
+            builder.Property(c => c.NomeProfessor)
+              .HasColumnName("NomeProfessor")
+              .HasMaxLength(150)
+              .IsRequired();
+
+            builder.Property(c => c.Ementa)
+              .HasColumnName("Ementa")
+              .HasMaxLength(300)
               .IsRequired();
         }
     }

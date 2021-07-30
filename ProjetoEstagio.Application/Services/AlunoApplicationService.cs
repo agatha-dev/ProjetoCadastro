@@ -38,14 +38,12 @@ namespace Projeto.Application.Services
         {
             var aluno = new Aluno();
 
-            aluno.IdAlunos = Guid.NewGuid();
-            aluno.IdMatricula = Guid.NewGuid();
-            aluno.IdTurma = Guid.NewGuid();
             aluno.Cpf = model.Cpf;
-            aluno.nome = model.Nome;
+            aluno.Nome = model.Nome;
             aluno.Email = model.Email;
             aluno.Endereco = model.Endereco;
-            
+            aluno.IdTurma = Guid.Parse(model.IdTurma);
+  
             alunoDomainService.Insert(aluno);
         }
 
@@ -53,8 +51,7 @@ namespace Projeto.Application.Services
         {
             var aluno = new Aluno();
 
-            aluno.IdAlunos = model.IdAluno;
-            aluno.nome = model.Nome;
+            aluno.Nome = model.Nome;
             aluno.Email = model.Email;
 
             alunoDomainService.Update(aluno);

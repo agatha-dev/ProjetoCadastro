@@ -10,13 +10,13 @@ namespace ProjetoEstagio.Domain.Entities
     public class Turma
     {
         [Key]
-        public Guid IdTurma { get; set; }
-        public Guid IdAluno { get; set; }
-        public string Curso { get; set; }
+        public Guid Id { get; set; }
+        public string NomeCurso { get; set; }
+        public string NomeProfessor { get; set; }
+        public string Ementa { get; set; }
 
         #region relacionamento
-        //1 para muitos
-        public List<Aluno> Alunos { get; set; }
+        public ICollection<Aluno> Alunos { get; set; }
         #endregion
 
     }
